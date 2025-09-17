@@ -48,30 +48,7 @@ require([
               digitSeparator: true,
               places: 0
             }
-          }, {
-            fieldName: "ANGLE",
-            label: "Angle: ",
-            visible: true,
-            format: {
-              digitSeparator: true,
-              places: 0
-            }
-          }, {
-            fieldName: "Shape__Area",
-            label: "Area:",
-            visible: true,
-            format: {
-              digitSeparator: true,
-              places: 0
-            }
-          }, {
-            fieldName: "Shape__Length",
-            label: "Length:",
-            visible: true,
-            format: {
-              digitSeparator: true,
-              places: 0
-            }
+          
           }
                       ]
         }]
@@ -93,7 +70,7 @@ require([
       // popupTemplate property of FeatureLayer
     var featureLayer = new FeatureLayer({
       url: "https://services2.arcgis.com/bB9Y1bGKerz1PTl5/ArcGIS/rest/services/STL_Neighborhood/FeatureServer/0",
-      outFields: ["*"],
+      outFields: ["NHD_NAME", "NHD_NUM"],
       popupTemplate: template,
       renderer:renderer
     });
